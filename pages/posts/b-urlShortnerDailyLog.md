@@ -1,6 +1,6 @@
 ---
 title: Project 1 URL Shortener
-date: 2023/5/04s
+date: 2023/5/04
 description: How I spent my time on this project, planning, building, scrapping everyting and starting over.
 tag: web development
 author: Vernon van der Merwe
