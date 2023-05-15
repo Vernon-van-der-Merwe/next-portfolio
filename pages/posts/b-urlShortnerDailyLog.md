@@ -18,7 +18,8 @@ author: Vernon van der Merwe
 - [Back End Repository](https://github.com/Vernon-van-der-Merwe/url-parser-serverless-be)
 ---
 
-
+# Final Architecture
+![image](/images/architecture.png)
 # Daily log
 
 ## Day 1 : Setup, planning, and what am I getting myself into? 😅
@@ -58,9 +59,16 @@ The files are being indexed by the alphabetical filename, not the title in the d
 
 1. Let's setup our base.
     - Create a new project on firebase
+    ![image](/images/createfire.png)
+    ![image](/images/createfire2.png)
+    ![image](/images/createfire3.png)
+    ![image](/images/createfire4.png)
     - Create the github repo
+    ![image](/images/creategh.png)
     - clone the repo
+    ![image](/images/creategh2.png)
     - Create my react & next.js project locally
+    ![image](/images/creategh3.png)
     - Add mantineUI
         - I installed next.js 13, have only worked with next.js 12 until now... they made changes to the way you structure projects... time to research ...
         - After some research, I found that mantine doesnt support the new way of building next.js 13 apps ...
@@ -68,6 +76,8 @@ The files are being indexed by the alphabetical filename, not the title in the d
 
 2. Add our Layout & components.
     - I wanted to a add a component as-well to see if everything is working as expected, so I added a Responsive navbar, and created a dashboard layout.
+    ![image](/images/navbar.png)
+    ![image](/images/responsiveness.gif)
 
 
 ---
@@ -76,7 +86,9 @@ The files are being indexed by the alphabetical filename, not the title in the d
 ### Deploy the apps, both blog and Url Shortener.
 
 1. Lets add Firebase and deploy my initial solution.
+    ![image](/images/firebaseinit.png)
     - Ran into a problem with payment... need an alternate solution.
+    ![image](/images/payment.png)
 
 2. Okey, so had some issues with google payment, but no biggie, seems like vercel offers a similar solution, with a postgres db, serverless functions and edge functions, and then hosting. With a generious free plan :)
     - Deployment was crazy simple, literally just add your repo and they deploy the project for you... done
@@ -143,12 +155,17 @@ So I bit the bullet, and decided to deploy a AWS Lambda function, I mean its pre
 2. Set up the base project
     - This was yet another mission. I spent so much time reading documentation, and ran into so many walls.
         - Auth
-        - Very  short default timeout
-        - Hard to manually add JS
+        - Very short default timeout, that wasnt as straight forward to figure out
+        - Hard to manually add TS
         - The template file is completely new to me...
 3. Finally got something deployed... and worked on improving that.
-4. Then I did some clean up on both the FE and the BE.
+4. Then I had to figure out how service accounts work on firebase since I needed access to the firestore db from the redirect function.
+    - Got it working.
+    - Get the url 
+    - redirect and update the stats like clicks.
+    - when err occurs redirect to the error page
 5. Added some features: 
+    - Added a 500 page
     - When your url isn't valid you get redirected to a 500 page
     - Fixed the login and auth routing
 
