@@ -8,7 +8,7 @@ author: Vernon van der Merwe
 # Daily log
 ## All the links to the live apps and repos
 ---
-- [Front End Live app](url-shortner-79aa8.web.app)
+- [Front End Live app](https://url-shortner-79aa8.web.app)
     - Login: 
         -  email: test@gmail.com
         -  password: Hello123
@@ -168,4 +168,3 @@ So I bit the bullet, and decided to deploy a AWS Lambda function, I mean its pre
     - Added a 500 page
     - When your url isn't valid you get redirected to a 500 page
     - Fixed the login and auth routing
-
