@@ -7,13 +7,17 @@ author: Vernon van der Merwe
 ---
 # Daily log
 ## All the links to the live apps and repos
-- [Repo - FE](https://github.com/Vernon-van-der-Merwe/url-shortner)
-- [Live app](url-shortner-79aa8.web.app)
+---
+- [Front End Live app](url-shortner-79aa8.web.app)
     - Login: 
         -  email: test@gmail.com
         -  password: Hello123
     - Or just register
-- [Repo - BE](
+---
+- [Front End Repository](https://github.com/Vernon-van-der-Merwe/url-shortner)
+- [Back End Repository](https://github.com/Vernon-van-der-Merwe/url-parser-serverless-be)
+---
+
 
 # Daily log
 
@@ -25,11 +29,11 @@ Like so 👇
 ![image](/images/initialLaningPage.png)
 
 ### Wins
-- We can document our process now and provide some value to the outside word. Now people can follow the process and learn aswell
+- I can document my process now and provide some value to the outside word. Now people can follow the process and learn as-well.
 
 ### Shortcomings
-- I didn't get to the actual "test" project, but I did get to the planning and documentation, which is a good start I guess.
-- This documentation project is going to need some work to fit my specific needs, don't know if ill get to it in this test.
+- I didn't get to the "actual" project, but I did get to the planning and documentation, which is a good start I guess.
+- This documentation project/blog site project, is going to need some work to fit my specific needs, don't know if ill get to it in this test.
 - This project needs diagram support, I cant go without diagram support. Already saw a Github thread on it, will explore in the near future.
 ---
 
@@ -43,14 +47,14 @@ The files are being indexed by the alphabetical filename, not the title in the d
 - b-thisIsMySecondBlogPost.md
 - c-thisIsMyThirdBlogPost.md
 
-### Now on to the test project
+### Now on to the 'Short'URL project
 
     - Ill be using React and [Next.js](https://vercel.com/home?utm_source=next-site&utm_medium=footer&utm_campaign=next-website)
     - [MantineUI](https://mantine.dev/) as the UI library
     - [Firebase](https://firebase.google.com/): 
         - for authentication
         - Database and hosting
-        - Functions - this is very similar to aws lambda, and azure functions
+        - Functions - this is very similar to aws lambda, and azure functions (This changes later on 👀)
 
 1. Let's setup our base.
     - Create a new project on firebase
@@ -142,3 +146,9 @@ So I bit the bullet, and decided to deploy a AWS Lambda function, I mean its pre
         - Very  short default timeout
         - Hard to manually add JS
         - The template file is completely new to me...
+3. Finally got something deployed... and worked on improving that.
+4. Then I did some clean up on both the FE and the BE.
+5. Added some features: 
+    - When your url isn't valid you get redirected to a 500 page
+    - Fixed the login and auth routing
+
