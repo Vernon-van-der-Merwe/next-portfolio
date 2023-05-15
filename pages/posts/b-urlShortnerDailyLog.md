@@ -17,6 +17,14 @@ author: Vernon van der Merwe
 - [Front End Repository](https://github.com/Vernon-van-der-Merwe/url-shortner)
 - [Back End Repository](https://github.com/Vernon-van-der-Merwe/url-parser-serverless-be)
 ---
+- [Front End Commits](https://github.com/Vernon-van-der-Merwe/url-shortner/commits/main)
+- [Back End Commits](https://github.com/Vernon-van-der-Merwe/url-parser-serverless-be/commits/main)
+---
+## Extras
+---
+- [Blog site your on now - Repo](https://github.com/Vernon-van-der-Merwe/next-portfolio)
+- [Blog site Commits](https://github.com/Vernon-van-der-Merwe/next-portfolio/commits/main)
+---
 
 # Final Architecture
 ![image](/images/architecture.png)
