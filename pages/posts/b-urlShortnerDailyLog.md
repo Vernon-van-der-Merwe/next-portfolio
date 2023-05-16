@@ -1,7 +1,7 @@
 ---
 title: Project 1 URL Shortener
 date: 2023/5/04
-description: How I spent my time on this project, planning, building, scrapping everyting and starting over.
+description: How I spent my time on this project, planning, building, scrapping everything and starting over.
 tag: web development
 author: Vernon van der Merwe
 ---
@@ -48,7 +48,7 @@ Like so 👇
 
 ## Day 2
 ### One small improvement to the blog site
-Firstly I needed to fix 1 problem, the blog posts arent being sorted in the way I want them to be sorted, this is definitly going to confuse the readers.
+Firstly I needed to fix 1 problem, the blog posts aren't being sorted in the way I want them to be sorted, this is definitely going to confuse the readers.
 Luckily I found a solution in the nextra docs [here](https://nextra.site/docs/guide/organize-files#default-behavior)
 
 The files are being indexed by the alphabetical filename, not the title in the doc or anything like that, so my temporary solution is to just add the alphabetical prefix to the filename, like so:
@@ -79,7 +79,7 @@ The files are being indexed by the alphabetical filename, not the title in the d
     ![image](/images/creategh3.png)
     - Add mantineUI
         - I installed next.js 13, have only worked with next.js 12 until now... they made changes to the way you structure projects... time to research ...
-        - After some research, I found that mantine doesnt support the new way of building next.js 13 apps ...
+        - After some research, I found that mantine doesn't support the new way of building next.js 13 apps ...
         - Seems like the only problem is the new [Pages to App](https://nextjs.org/docs/pages/building-your-application/upgrading/app-router-migration) structure, so lets revert that to the old way of doing things.
 
 2. Add our Layout & components.
@@ -98,16 +98,16 @@ The files are being indexed by the alphabetical filename, not the title in the d
     - Ran into a problem with payment... need an alternate solution.
     ![image](/images/payment.png)
 
-2. Okey, so had some issues with google payment, but no biggie, seems like vercel offers a similar solution, with a postgres db, serverless functions and edge functions, and then hosting. With a generious free plan :)
+2. Okay, so had some issues with google payment, but no biggie, seems like vercel offers a similar solution, with a postgres db, serverless functions and edge functions, and then hosting. With a generous free plan :)
     - Deployment was crazy simple, literally just add your repo and they deploy the project for you... done
     - [Blog Site (you are currently on)](https://next-portfolio-plum-six.vercel.app/)
-    - [Url Shortner](https://url-shortner-blog.vercel.app/)
+    - [Url Shortener](https://url-shortner-blog.vercel.app/)
 
 3. Now that We have our live site, lets add some serverless functions and persist our some data.
     - I chose this approach of deploying simple projects purely for the fact of keeping things simple to mitigate extra complications when things go wrong in the deployment process.
     - After this I know Ill have a working solution living in the cloud.
 
-4. Okey, after a few hours... I reverted to Firebase... Reasons being...
+4. Okay, after a few hours... I reverted to Firebase... Reasons being...
     - Time is limited, and I don't want to spend time learning a new platform, when I already know firebase.
     - Vercel doesn't have user auth as a service. And I wanted that to have users be able to view their own links.
     - So only problem now is I am stuck with edge functions and not a full node.js backend or even functions...
@@ -145,15 +145,19 @@ The problem we have, is that I would've loved to just stick with firebase functi
 A very popular option in the react world is vercel, so lets give it a go.
 - I deployed one of their functions... but wasn't entirely happy... It wasn't really what I was expecting.
 
+Then I realized I have active functions on my personal portfolio project. That means I can just contact the url shortener DB with the personal portfolio function, through adding a Service account and initializing the firebase admin SDK with that.
+
+After struggling with this for hours, I tried to deploy, and realized that the card problem is blocking my deployment, so they keep the functions active since they have a generous free tier... but they don't allow deployments untill you pay... so I am stuck at square 1.
+
 So I bit the bullet, and decided to deploy a AWS Lambda function, I mean its prefect.
 - I can tame mu curiosity of how AWS and lambda func work, since I haven't touched that side of the cloud world.
-- I can get a glimpse into your tech stack
-- Lastly what better way to show you guys what I can do. 😊
+- I can get a glimpse into a new tech stack.
+- and I can access my Firestore DB with the firebase admin SDK and a service account
 
 1. Create an account on AWS
     -   This was simple enough... but I soon realized that I need something called an AIM user, to be able to deploy my function. 
         An AIM user is basically a user that has access to the AWS console, and can do stuff on your behalf.
-    - I struggled with trying to create this user and to successfully log into the portal for a good few hours... its not the most straightforward user friendly experience. I still dont think its set up correnctly...
+    - I struggled with trying to create this user and to successfully log into the portal for a good few hours... its not the most straightforward user friendly experience. I still don't think its set up correctly...
         But hey it works.
     - Then I went down the rabbit hole of how I can develop these function apps.
     - I created one on the portal, and opened it online in that editor... its cool and all but I want to develop locally.
@@ -163,7 +167,7 @@ So I bit the bullet, and decided to deploy a AWS Lambda function, I mean its pre
 2. Set up the base project
     - This was yet another mission. I spent so much time reading documentation, and ran into so many walls.
         - Auth
-        - Very short default timeout, that wasnt as straight forward to figure out
+        - Very short default timeout, that wasn't as straight forward to figure out
         - Hard to manually add TS
         - The template file is completely new to me...
 3. Finally got something deployed... and worked on improving that.
@@ -173,6 +177,5 @@ So I bit the bullet, and decided to deploy a AWS Lambda function, I mean its pre
     - redirect and update the stats like clicks.
     - when err occurs redirect to the error page
 5. Added some features: 
-    - Added a 500 page
-    - When your url isn't valid you get redirected to a 500 page
-    - Fixed the login and auth routing
+    - Added a 500 page to the url project, to redirect to that when the user experiences an issue.
+    - Fixed the login and auth routing.
