@@ -239,8 +239,10 @@ The ideal solution would be to add this to the AWS lambda function, or even depl
 I will do that tomorrow though. Before I go to bed I just want to test the url redirect error handling, since thats the only thing I havent seen working on the live site... lets see...
 
 
-And it doesnt work... The new auth changes checks whether your logged in, and we need to have that url redirect to be open to the public I assume...
+And it doesnt work... The new auth Context checks whether your auth state has changed, and we need to have that url redirect to be open to the public I assume...
 
 Nope I was wrong, I had a method in the app file that redirected used to the landing page. 
 But after reading this (Article)[https://nextjs.org/docs/pages/api-reference/next-config-js/redirects]
 I made a redirect that redirects users that land on the base path to dashboard.
+This partially fixed my problem, but then when user isn't logged in the auth context throws you to the login page so I had to add a check for the open URL's
+Seems like thisll be my next issue, not nice to discover before bed but l;ets hope the propogation of my site might mean its fixed in the morning.
