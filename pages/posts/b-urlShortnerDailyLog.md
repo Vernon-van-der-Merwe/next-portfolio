@@ -246,3 +246,18 @@ But after reading this (Article)[https://nextjs.org/docs/pages/api-reference/nex
 I made a redirect that redirects users that land on the base path to dashboard.
 This partially fixed my problem, but then when user isn't logged in the auth context throws you to the login page so I had to add a check for the open URL's
 Seems like thisll be my next issue, not nice to discover before bed but l;ets hope the propogation of my site might mean its fixed in the morning.
+
+### Its like 4AM, I Cant Sleep, lets fix this.
+
+And it took me literally no time, the site just needed to propagate 😄.
+
+Now if you go on the app, add a url, click shortened version, and the id gets damaged, or url doesnt exist, you get redirected to this page:
+
+![FE Structure](/images/500Page.png)
+
+
+If you look closely you can even see I pass in a message using query params.
+
+# Phase 7
+## I really need to test, add FE validation, and go through all the edge cases...
+Site breaks easily...
