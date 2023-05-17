@@ -259,5 +259,11 @@ Now if you go on the app, add a url, click shortened version, and the id gets da
 If you look closely you can even see I pass in a message using query params.
 
 # Phase 7
-## I really need to test, add FE validation, and go through all the edge cases...
-Site breaks easily...
+## Need to finalize and go through the checklist
+- [] Site needs a lot of testing, especially the redirect.
+- [] Need to add all the api related logic to the Lambda Function.
+- [] Setup pipelines for the Lambda Function.
+- [] Redirect error page should support error codes as well.
+- [] Needs FE validation based on the data, not just generic validation.
+- [] Need to ensure all the components follow the same structure.
+- [] need a shorter domain for the redirectURl, currently its not really a URL shortener more of a URL elongation app😄
